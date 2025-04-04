@@ -1,1 +1,20 @@
-Inicio
+#include <stdio.h>
+
+int main() {
+    int num = 0, numero;
+
+    while (num < 10) {
+        printf("Ingrese un numero: ");
+        scanf("%d", &numero);
+
+        if (numero % 2 == 0) {
+            printf("Es Par\n");
+        } else {
+            printf("Es Impar\n");
+        }
+
+        num++;
+    }
+
+    return 0;
+}
