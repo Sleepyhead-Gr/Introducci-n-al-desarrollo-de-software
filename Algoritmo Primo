@@ -1,0 +1,17 @@
+Algoritmo primo
+	Escribir "Pide un numero entero: "
+	Leer numeroingresado;
+	iteracion = 1;
+	divisionResiduocero = 0
+	Mientras iteracion <= numeroingresado Hacer
+		Si(numeroingresado % iteracion == 0) Entonces
+			divisionResiduocero = divisionResiduocero + 1;
+		FinSi
+		iteracion = iteracion +1;
+	FinMientras
+	si(divisionResiduocero == 2) Entonces
+		Escribir "El número ", numeroingresado, " sí es primo."
+	Sino
+		Escribir "El número ", numeroingresado, " no es primo."
+	FinSi
+FinAlgoritmo
