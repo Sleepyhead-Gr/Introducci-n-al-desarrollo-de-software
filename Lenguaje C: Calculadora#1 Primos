@@ -1,29 +1,24 @@
 #include <stdio.h>
-#include <stdbool.h> // Necesario para usar el tipo de dato bool
-
-bool esPrimo(int numero) {
-    if (numero <= 1) {
-        return false; // 1 y números negativos no son primos
-    }
-    for (int i = 2; i * i <= numero; i++) {
-        if (numero % i == 0) {
-            return false; // Si es divisible por algún número, no es primo
-        }
-    }
-    return true; // Si no se encontró ningún divisor, es primo
-}
 
 int main() {
-    int numero;
+    int numeroIngresado, iteracion = 1, divisionResiduoCero = 0;
 
-    printf("Ingresa un número entero: ");
-    scanf("%d", &numero);
+    printf("Pide un número entero: ");
+    scanf("%d", &numeroIngresado);
 
-    if (esPrimo(numero)) {
-        printf("%d Es un número primo.\n", numero);
+    while (iteracion <= numeroIngresado) {
+        if (numeroIngresado % iteracion == 0) {
+            divisionResiduoCero++;
+        }
+        iteracion++;
+    }
+
+    if (divisionResiduoCero == 2) {
+        printf("El número %d sí es primo.\n", numeroIngresado);
     } else {
-        printf("%d No es un número primo.\n", numero);
+        printf("El número %d no es primo.\n", numeroIngresado);
     }
 
     return 0;
 }
+
