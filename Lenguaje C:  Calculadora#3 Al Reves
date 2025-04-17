@@ -1,20 +1,21 @@
 #include <stdio.h>
 
 int main() {
-    int numero, inverso = 0, residuo;
+    int numero, residuo, inverso = 0;
 
-    printf("Ingrese un numero: ");
+    printf("Ingrese un número entero de 4 dígitos: ");
     scanf("%d", &numero);
 
     residuo = numero;
 
     while (residuo > 0) {
         inverso = inverso * 10 + residuo % 10;
-        residuo = (residuo - residuo % 10) / 10;
+        residuo = residuo / 10;
     }
 
-    printf("Valor del numero inverso: %d\n", inverso);
-    printf("El numero: %d\n", numero);
+    printf("Valor del número inverso: %d\n", inverso);
+    printf("El número original: %d\n", numero);
 
     return 0;
 }
+
