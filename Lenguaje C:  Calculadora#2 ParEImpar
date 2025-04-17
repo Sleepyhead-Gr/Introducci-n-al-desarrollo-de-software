@@ -3,8 +3,10 @@
 int main() {
     int num = 0, numero;
 
-    while (num < 10) {
-        printf("Ingrese un numero: ");
+    printf("Ingrese 10 números:\n");
+
+    do {
+        num++;
         scanf("%d", &numero);
 
         if (numero % 2 == 0) {
@@ -12,9 +14,8 @@ int main() {
         } else {
             printf("Es Impar\n");
         }
-
-        num++;
-    }
+    } while (num < 10);
 
     return 0;
 }
+
